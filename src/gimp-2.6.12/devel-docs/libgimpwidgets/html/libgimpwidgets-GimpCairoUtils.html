@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>gimpcairo-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GIMP Widgets Library Reference Manual">
+<link rel="up" href="libgimpwidgets-utils.html" title="Part V. GIMP Widgets Utilities">
+<link rel="prev" href="libgimpwidgets-utils.html" title="Part V. GIMP Widgets Utilities">
+<link rel="next" href="libgimpwidgets-GimpHelpUI.html" title="GimpHelpUI">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libgimpwidgets-utils.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="libgimpwidgets-utils.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GIMP Widgets Library Reference Manual</th>
+<td><a accesskey="n" href="libgimpwidgets-GimpHelpUI.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libgimpwidgets-GimpCairoUtils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libgimpwidgets-GimpCairoUtils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libgimpwidgets-GimpCairoUtils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libgimpwidgets-GimpCairoUtils.top_of_page"></a>gimpcairo-utils</span></h2>
+<p>gimpcairo-utils</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libgimpwidgets-GimpCairoUtils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                <a class="link" href="libgimpwidgets-GimpCairoUtils.html#gimp-cairo-set-source-rgb" title="gimp_cairo_set_source_rgb ()">gimp_cairo_set_source_rgb</a>           (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *color</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libgimpwidgets-GimpCairoUtils.html#gimp-cairo-set-source-rgba" title="gimp_cairo_set_source_rgba ()">gimp_cairo_set_source_rgba</a>          (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *color</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimpwidgets-GimpCairoUtils.html#gimp-cairo-set-focus-line-pattern" title="gimp_cairo_set_focus_line_pattern ()">gimp_cairo_set_focus_line_pattern</a>   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk3/GtkWidget.html"><span class="type">GtkWidget</span></a> *widget</code></em>);
+<a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-pattern-t.html#cairo-pattern-t"><span class="returnvalue">cairo_pattern_t</span></a> *   <a class="link" href="libgimpwidgets-GimpCairoUtils.html#gimp-cairo-checkerboard-create" title="gimp_cairo_checkerboard_create ()">gimp_cairo_checkerboard_create</a>      (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> size</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *light</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *dark</code></em>);
+<a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="returnvalue">cairo_surface_t</span></a> *   <a class="link" href="libgimpwidgets-GimpCairoUtils.html#gimp-cairo-surface-create-from-pixbuf" title="gimp_cairo_surface_create_from_pixbuf ()">gimp_cairo_surface_create_from_pixbuf</a>
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);
+#define             <a class="link" href="libgimpwidgets-GimpCairoUtils.html#GIMP-CAIRO-RGB24-SET-PIXEL:CAPS" title="GIMP_CAIRO_RGB24_SET_PIXEL()">GIMP_CAIRO_RGB24_SET_PIXEL</a>          (d,
+                                                         r,
+                                                         g,
+                                                         b)
+#define             <a class="link" href="libgimpwidgets-GimpCairoUtils.html#GIMP-CAIRO-ARGB32-SET-PIXEL:CAPS" title="GIMP_CAIRO_ARGB32_SET_PIXEL()">GIMP_CAIRO_ARGB32_SET_PIXEL</a>         (d,
+                                                         r,
+                                                         g,
+                                                         b,
+                                                         a)
+</pre>
+</div>
+<div class="refsect1">
+<a name="libgimpwidgets-GimpCairoUtils.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="libgimpwidgets-GimpCairoUtils.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="gimp-cairo-set-source-rgb"></a><h3>gimp_cairo_set_source_rgb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gimp_cairo_set_source_rgb           (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *color</code></em>);</pre>
+<p>
+Sets the source pattern within <em class="parameter"><code>cr</code></em> to the solid opaque color
+described by <em class="parameter"><code>color</code></em>.
+</p>
+<p>
+This function calls <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-set-source-rgb"><code class="function">cairo_set_source_rgb()</code></a> for you.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cr</code></em> :</span></p></td>
+<td>Cairo context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>GimpRGB color</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-cairo-set-source-rgba"></a><h3>gimp_cairo_set_source_rgba ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gimp_cairo_set_source_rgba          (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *color</code></em>);</pre>
+<p>
+Sets the source pattern within <em class="parameter"><code>cr</code></em> to the solid translucent color
+described by <em class="parameter"><code>color</code></em>.
+</p>
+<p>
+This function calls <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-set-source-rgba"><code class="function">cairo_set_source_rgba()</code></a> for you.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cr</code></em> :</span></p></td>
+<td>Cairo context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>GimpRGB color</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-cairo-set-focus-line-pattern"></a><h3>gimp_cairo_set_focus_line_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_cairo_set_focus_line_pattern   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gtk3/GtkWidget.html"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p>
+Sets color and dash pattern for stroking a focus line on the given
+<em class="parameter"><code>cr</code></em>. The line pattern is taken from <em class="parameter"><code>widget</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cr</code></em> :</span></p></td>
+<td>Cairo context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>widget to draw the focus indicator on</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget style has a focus line pattern,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-cairo-checkerboard-create"></a><h3>gimp_cairo_checkerboard_create ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-pattern-t.html#cairo-pattern-t"><span class="returnvalue">cairo_pattern_t</span></a> *   gimp_cairo_checkerboard_create      (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"><span class="type">cairo_t</span></a> *cr</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> size</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *light</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *dark</code></em>);</pre>
+<p>
+Create a repeating checkerboard pattern.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cr</code></em> :</span></p></td>
+<td>Cairo context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>check size</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>light</code></em> :</span></p></td>
+<td>light check color or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the default light gray</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dark</code></em> :</span></p></td>
+<td>dark check color or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the default dark gray</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new Cairo pattern that can be used as a source on <em class="parameter"><code>cr</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-cairo-surface-create-from-pixbuf"></a><h3>gimp_cairo_surface_create_from_pixbuf ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="returnvalue">cairo_surface_t</span></a> *   gimp_cairo_surface_create_from_pixbuf
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);</pre>
+<p>
+Create a Cairo image surface from a GdkPixbuf.
+</p>
+<p>
+You should avoid calling this function as there are probably more
+efficient ways of achieving the result you are looking for.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>pixbuf</code></em> :</span></p></td>
+<td>a GdkPixbuf</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GIMP-CAIRO-RGB24-SET-PIXEL:CAPS"></a><h3>GIMP_CAIRO_RGB24_SET_PIXEL()</h3>
+<pre class="programlisting">#define             GIMP_CAIRO_RGB24_SET_PIXEL(d, r, g, b)</pre>
+<p>
+Sets a single pixel in an Cairo image surface in <a href="/usr/share/gtk-doc/html/cairo/cairo-Image-Surfaces.html#CAIRO-FORMAT-RGB24:CAPS"><code class="literal">CAIRO_FORMAT_RGB24</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>d</code></em> :</span></p></td>
+<td>pointer to the destination buffer</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>r</code></em> :</span></p></td>
+<td>red component</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>g</code></em> :</span></p></td>
+<td>green component</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>b</code></em> :</span></p></td>
+<td>blue component</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GIMP-CAIRO-ARGB32-SET-PIXEL:CAPS"></a><h3>GIMP_CAIRO_ARGB32_SET_PIXEL()</h3>
+<pre class="programlisting">#define             GIMP_CAIRO_ARGB32_SET_PIXEL(d, r, g, b, a)</pre>
+<p>
+Sets a single pixel in an Cairo image surface in <a href="/usr/share/gtk-doc/html/cairo/cairo-Image-Surfaces.html#CAIRO-FORMAT-ARGB32:CAPS"><code class="literal">CAIRO_FORMAT_ARGB32</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>d</code></em> :</span></p></td>
+<td>pointer to the destination buffer</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>r</code></em> :</span></p></td>
+<td>red component, not pre-multiplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>g</code></em> :</span></p></td>
+<td>green component, not pre-multiplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>b</code></em> :</span></p></td>
+<td>blue component, not pre-multiplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>a</code></em> :</span></p></td>
+<td>alpha component</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.6</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!-- ##### SECTION ./tmpl/gimpunit.sgml:Long_Description ##### -->
+<para>
+Provides a collection of predefined units and functions for creating
+user-defined units.
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gimpunit.sgml:See_Also ##### -->
+<para>
+#GimpUnitMenu
+</para>
+<para>
+#GimpSizeEntry
+</para>
+
+
+<!-- ##### SECTION ./tmpl/gimpunit.sgml:Short_Description ##### -->
+Provides a collection of predefined units and functions for creating
+user-defined units.
+
+
+<!-- ##### SECTION ./tmpl/gimpunit.sgml:Title ##### -->
+gimpunit
+
+
+<!-- ##### FUNCTION gimp_unit_get_abbreviation ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_deletion_flag ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_digits ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_factor ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_identifier ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_number_of_built_in_units ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_number_of_units ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_plural ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_singular ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_get_symbol ##### -->
+<para>
+
+</para>
+
+@unit: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_new ##### -->
+<para>
+
+</para>
+
+@identifier: 
+@factor: 
+@digits: 
+@symbol: 
+@abbreviation: 
+@singular: 
+@plural: 
+@Returns: 
+
+<!-- ##### FUNCTION gimp_unit_set_deletion_flag ##### -->
+<para>
+
+</para>
+
+@unit: 
+@deletion_flag: 
+

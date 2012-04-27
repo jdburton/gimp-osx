@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>gimpcontext</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GIMP Library Reference Manual">
+<link rel="up" href="libgimp-general.html" title="Functions not Related to Specific Images">
+<link rel="prev" href="libgimp-gimpbuffer.html" title="gimpbuffer">
+<link rel="next" href="libgimp-gimpgimprc.html" title="gimpgimprc">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libgimp-gimpbuffer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="libgimp-general.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GIMP Library Reference Manual</th>
+<td><a accesskey="n" href="libgimp-gimpgimprc.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libgimp-gimpcontext.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libgimp-gimpcontext.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libgimp-gimpcontext"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libgimp-gimpcontext.top_of_page"></a>gimpcontext</span></h2>
+<p>gimpcontext — Functions to manipulate a plug-in's context.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libgimp-gimpcontext.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-push" title="gimp_context_push ()">gimp_context_push</a>                   (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-pop" title="gimp_context_pop ()">gimp_context_pop</a>                    (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-foreground" title="gimp_context_get_foreground ()">gimp_context_get_foreground</a>         (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *foreground</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-foreground" title="gimp_context_set_foreground ()">gimp_context_set_foreground</a>         (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *foreground</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-background" title="gimp_context_get_background ()">gimp_context_get_background</a>         (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *background</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-background" title="gimp_context_set_background ()">gimp_context_set_background</a>         (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *background</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-default-colors" title="gimp_context_set_default_colors ()">gimp_context_set_default_colors</a>     (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-swap-colors" title="gimp_context_swap_colors ()">gimp_context_swap_colors</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-opacity" title="gimp_context_get_opacity ()">gimp_context_get_opacity</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-opacity" title="gimp_context_set_opacity ()">gimp_context_set_opacity</a>            (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> opacity</code></em>);
+<a class="link" href="libgimp-gimpenums.html#GimpLayerModeEffects" title="enum GimpLayerModeEffects"><span class="returnvalue">GimpLayerModeEffects</span></a> <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-paint-mode" title="gimp_context_get_paint_mode ()">gimp_context_get_paint_mode</a>        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-paint-mode" title="gimp_context_set_paint_mode ()">gimp_context_set_paint_mode</a>         (<em class="parameter"><code><a class="link" href="libgimp-gimpenums.html#GimpLayerModeEffects" title="enum GimpLayerModeEffects"><span class="type">GimpLayerModeEffects</span></a> paint_mode</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-brush" title="gimp_context_get_brush ()">gimp_context_get_brush</a>              (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-brush" title="gimp_context_set_brush ()">gimp_context_set_brush</a>              (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-pattern" title="gimp_context_get_pattern ()">gimp_context_get_pattern</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-pattern" title="gimp_context_set_pattern ()">gimp_context_set_pattern</a>            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-gradient" title="gimp_context_get_gradient ()">gimp_context_get_gradient</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-gradient" title="gimp_context_set_gradient ()">gimp_context_set_gradient</a>           (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-palette" title="gimp_context_get_palette ()">gimp_context_get_palette</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-palette" title="gimp_context_set_palette ()">gimp_context_set_palette</a>            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-font" title="gimp_context_get_font ()">gimp_context_get_font</a>               (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-font" title="gimp_context_set_font ()">gimp_context_set_font</a>               (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgimp-gimpcontext.html#gimp-context-get-paint-method" title="gimp_context_get_paint_method ()">gimp_context_get_paint_method</a>       (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-paint-method" title="gimp_context_set_paint_method ()">gimp_context_set_paint_method</a>       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libgimp-gimpcontext.html#gimp-context-list-paint-methods" title="gimp_context_list_paint_methods ()">gimp_context_list_paint_methods</a>     (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *num_paint_methods</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> ***paint_methods</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libgimp-gimpcontext.description"></a><h2>Description</h2>
+<p>
+Functions to manipulate a plug-in's context.
+</p>
+</div>
+<div class="refsect1">
+<a name="libgimp-gimpcontext.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="gimp-context-push"></a><h3>gimp_context_push ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_push                   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Pushes a context to the top of the plug-in's context stack.
+</p>
+<p>
+This procedure creates a new context by copying the current context.
+This copy becomes the new current context for the calling plug-in
+until it is popped again using <a class="link" href="libgimp-gimpcontext.html#gimp-context-pop" title="gimp_context_pop ()"><code class="function">gimp_context_pop()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-pop"></a><h3>gimp_context_pop ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_pop                    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Pops the topmost context from the plug-in's context stack.
+</p>
+<p>
+This procedure removes the topmost context from the plug-in's
+context stack. The context that was active before the corresponding
+call to <a class="link" href="libgimp-gimpcontext.html#gimp-context-push" title="gimp_context_push ()"><code class="function">gimp_context_push()</code></a> becomes the new current context of the
+plug-in.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-foreground"></a><h3>gimp_context_get_foreground ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_get_foreground         (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *foreground</code></em>);</pre>
+<p>
+Get the current GIMP foreground color.
+</p>
+<p>
+This procedure returns the current GIMP foreground color. The
+foreground color is used in a variety of tools such as paint tools,
+blending, and bucket fill.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>foreground</code></em> :</span></p></td>
+<td>The foreground color.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-foreground"></a><h3>gimp_context_set_foreground ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_foreground         (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *foreground</code></em>);</pre>
+<p>
+Set the current GIMP foreground color.
+</p>
+<p>
+This procedure sets the current GIMP foreground color. After this is
+set, operations which use foreground such as paint tools, blending,
+and bucket fill will use the new value.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>foreground</code></em> :</span></p></td>
+<td>The foreground color.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-background"></a><h3>gimp_context_get_background ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_get_background         (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *background</code></em>);</pre>
+<p>
+Get the current GIMP background color.
+</p>
+<p>
+This procedure returns the current GIMP background color. The
+background color is used in a variety of tools such as blending,
+erasing (with non-alpha images), and image filling.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>background</code></em> :</span></p></td>
+<td>The background color.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-background"></a><h3>gimp_context_set_background ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_background         (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html#GimpRGB"><span class="type">GimpRGB</span></a> *background</code></em>);</pre>
+<p>
+Set the current GIMP background color.
+</p>
+<p>
+This procedure sets the current GIMP background color. After this is
+set, operations which use background such as blending, filling
+images, clearing, and erasing (in non-alpha images) will use the new
+value.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>background</code></em> :</span></p></td>
+<td>The background color.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-default-colors"></a><h3>gimp_context_set_default_colors ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_default_colors     (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Set the current GIMP foreground and background colors to black and
+white.
+</p>
+<p>
+This procedure sets the current GIMP foreground and background
+colors to their initial default values, black and white.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-swap-colors"></a><h3>gimp_context_swap_colors ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_swap_colors            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Swap the current GIMP foreground and background colors.
+</p>
+<p>
+This procedure swaps the current GIMP foreground and background
+colors, so that the new foreground color becomes the old background
+color and vice versa.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-opacity"></a><h3>gimp_context_get_opacity ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             gimp_context_get_opacity            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Get the opacity.
+</p>
+<p>
+This procedure returns the opacity setting. The return value is a
+floating point number between 0 and 100.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The opacity.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-opacity"></a><h3>gimp_context_set_opacity ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_opacity            (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> opacity</code></em>);</pre>
+<p>
+Set the opacity.
+</p>
+<p>
+This procedure modifies the opacity setting. The value should be a
+floating point number between 0 and 100.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>opacity</code></em> :</span></p></td>
+<td>The opacity.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-paint-mode"></a><h3>gimp_context_get_paint_mode ()</h3>
+<pre class="programlisting"><a class="link" href="libgimp-gimpenums.html#GimpLayerModeEffects" title="enum GimpLayerModeEffects"><span class="returnvalue">GimpLayerModeEffects</span></a> gimp_context_get_paint_mode        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Get the paint mode.
+</p>
+<p>
+This procedure returns the paint-mode setting. The return value is
+an integer which corresponds to the values listed in the argument
+description.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The paint mode.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-paint-mode"></a><h3>gimp_context_set_paint_mode ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_paint_mode         (<em class="parameter"><code><a class="link" href="libgimp-gimpenums.html#GimpLayerModeEffects" title="enum GimpLayerModeEffects"><span class="type">GimpLayerModeEffects</span></a> paint_mode</code></em>);</pre>
+<p>
+Set the paint mode.
+</p>
+<p>
+This procedure modifies the paint_mode setting.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>paint_mode</code></em> :</span></p></td>
+<td>The paint mode.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-brush"></a><h3>gimp_context_get_brush ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_brush              (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active brush.
+</p>
+<p>
+This procedure returns the name of the currently active brush. All
+paint operations and stroke operations use this brush to control the
+application of paint to the image.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active brush.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-brush"></a><h3>gimp_context_set_brush ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_brush              (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set the specified brush as the active brush.
+</p>
+<p>
+This procedure allows the active brush to be set by specifying its
+name. The name is simply a string which corresponds to one of the
+names of the installed brushes. If there is no matching brush found,
+this procedure will return an error. Otherwise, the specified brush
+becomes active and will be used in all subsequent paint operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the brush.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-pattern"></a><h3>gimp_context_get_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_pattern            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active pattern.
+</p>
+<p>
+This procedure returns name of the the currently active pattern. All
+clone and bucket-fill operations with patterns will use this pattern
+to control the application of paint to the image.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active pattern.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-pattern"></a><h3>gimp_context_set_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_pattern            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set the specified pattern as the active pattern.
+</p>
+<p>
+This procedure allows the active pattern to be set by specifying its
+name. The name is simply a string which corresponds to one of the
+names of the installed patterns. If there is no matching pattern
+found, this procedure will return an error. Otherwise, the specified
+pattern becomes active and will be used in all subsequent paint
+operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the pattern.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-gradient"></a><h3>gimp_context_get_gradient ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_gradient           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active gradient.
+</p>
+<p>
+This procedure returns the name of the currently active gradient.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active gradient.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-gradient"></a><h3>gimp_context_set_gradient ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_gradient           (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Sets the specified gradient as the active gradient.
+</p>
+<p>
+This procedure lets you set the specified gradient as the active or
+\"current\" one. The name is simply a string which corresponds to
+one of the loaded gradients. If no matching gradient is found, this
+procedure will return an error. Otherwise, the specified gradient
+will become active and will be used for subsequent custom gradient
+operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the gradient.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-palette"></a><h3>gimp_context_get_palette ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_palette            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active palette.
+</p>
+<p>
+This procedure returns the name of the the currently active palette.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active palette.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-palette"></a><h3>gimp_context_set_palette ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_palette            (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set the specified palette as the active palette.
+</p>
+<p>
+This procedure allows the active palette to be set by specifying its
+name. The name is simply a string which corresponds to one of the
+names of the installed palettes. If no matching palette is found,
+this procedure will return an error. Otherwise, the specified
+palette becomes active and will be used in all subsequent palette
+operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the palette.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-font"></a><h3>gimp_context_get_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_font               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active font.
+</p>
+<p>
+This procedure returns the name of the currently active font.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active font.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-font"></a><h3>gimp_context_set_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_font               (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set the specified font as the active font.
+</p>
+<p>
+This procedure allows the active font to be set by specifying its
+name. The name is simply a string which corresponds to one of the
+names of the installed fonts. If no matching font is found, this
+procedure will return an error. Otherwise, the specified font
+becomes active and will be used in all subsequent font operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the font.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-get-paint-method"></a><h3>gimp_context_get_paint_method ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gimp_context_get_paint_method       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Retrieve the currently active paint method.
+</p>
+<p>
+This procedure returns the name of the currently active paint
+method.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The name of the active paint method.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since GIMP 2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-set-paint-method"></a><h3>gimp_context_set_paint_method ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_set_paint_method       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set the specified paint method as the active paint method.
+</p>
+<p>
+This procedure allows the active paint method to be set by
+specifying its name. The name is simply a string which corresponds
+to one of the names of the available paint methods. If there is no
+matching method found, this procedure will return an error.
+Otherwise, the specified method becomes active and will be used in
+all subsequent paint operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the paint method.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gimp-context-list-paint-methods"></a><h3>gimp_context_list_paint_methods ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gimp_context_list_paint_methods     (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *num_paint_methods</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> ***paint_methods</code></em>);</pre>
+<p>
+Lists the available paint methods.
+</p>
+<p>
+This procedure lists the names of the available paint methods. Any
+of the results can be used for <a class="link" href="libgimp-gimpcontext.html#gimp-context-set-paint-method" title="gimp_context_set_paint_method ()"><code class="function">gimp_context_set_paint_method()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>num_paint_methods</code></em> :</span></p></td>
+<td>The number of the available paint methods.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>paint_methods</code></em> :</span></p></td>
+<td>The names of the available paint methods.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since GIMP 2.4</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

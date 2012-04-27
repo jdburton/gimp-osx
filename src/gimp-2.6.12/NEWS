@@ -1,0 +1,451 @@
+                   ------------------------------
+                   GNU Image Manipulation Program
+                          2.6 Stable Branch
+                   ------------------------------
+
+This is the stable branch of GIMP. No new features are being added
+here, just bug-fixes.
+
+
+Overview of Changes from GIMP 2.6.11 to GIMP 2.6.12
+===================================================
+
+* Bugs fixed:
+
+ 627328 - GIMP 2.6.10 segfaults when CTRL-left click on a layer mask
+ 631885 - GIMP fails to import a path from SVG
+ 631728 - Crash or Gtk-CRITICAL on File->Open
+ 641259 - [abrt] gimp-2:2.6.11-1.fc14: py-slice.py:172:slice:TypeError: integer argument expected, got float
+ 640219 - gimp(1) manpage fixes
+ 640612 - Sample Colorize does not function non-interactively
+ 646947 - file-pdf-load: Don't use deprecated API
+ 639203 - file-psp: fix for bogus input data
+ 639203 - Fixes for some buffer overflow problems
+ 652280 - Guard against crash due to quitting while DND is processed
+ 660305 - fails to build with -Werror=format-security
+ 623045 - script-fu: make server IPv6 aware
+
+ ... plus a ton of others.
+
+* Updated translations:
+
+ Asturian (ast)
+ Catalan (Valencian) (ca@valencia)
+ Danish (da)
+ Greek (el)
+ Esperanto (eo)
+ Spanish (es)
+ Italian (it)
+ Japanese (ja)
+ Kazakh (kk)
+ Latvian (la)
+ Norwegian Nynorsk (nn)
+ Polish (pl)
+ Portuguese (pt)
+ Brazilian Portuguese (pt_BR)
+ Russian (ru)
+ Turkish (tr)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.10 to GIMP 2.6.11
+===================================================
+
+* Bugs fixed:
+
+ 631199 - Printing and Print preview broken with cairo 1.10
+ 572865 - Parasite handling had problems and can cause crashing
+ 628893 - Error with string-append and gimp-drawable-get-name
+ 623850 - Colors -> Retinex creates halos
+ 624487 - Fix incorrect "wrap mode" documentation values in Edge plug-in
+ 557380 - Difference of Gaussians gives blank doc if "Invert" selected
+ 627009 - Image type filter doesn't include .rgba SGI files
+ 626020 - Console window opening on file-ps-load
+ 624698 - Wood 1 and Wood 2 have bad alpha value
+ 624275 - Image saved from google docs generates a
+          'gimp-image-set-resolution' error message
+
+* Updated translations:
+
+ German (de)
+ Spanish (es)
+ Italian (it)
+ Japanese (ja)
+ Romanian (ro)
+ Chinese (Hong Kong) (zh_HK)
+ Chinese (Taiwan) (zh_HK)
+
+
+Overview of Changes from GIMP 2.6.9 to GIMP 2.6.10
+==================================================
+
+* Bugs fixed:
+
+ 613328 - TGA files saved with incorrect header yOrigin data
+ 623290 - Save As... does not save Windows Bitmap as default in dialog
+ 621363 - CMYK decompose broken
+ 595170 - brush - color from gradient works wrong in greyscale
+ 613838 - Error in gimp-hue-saturation PDB call
+ 622608 - GIMP crashes when clicking any scroll bar from combo boxes
+ 565459 - newly opened images are put into the background
+
+* Updated translations:
+
+ German (de)
+ Italian (it)
+ Romanian (ro)
+ Portuguese (pt)
+
+
+Overview of Changes from GIMP 2.6.8 to GIMP 2.6.9
+=================================================
+
+* Bugs fixed:
+
+ 612618 - Font selection remains visible
+ 622234 - gimp.desktop: image/x-psd in MimeTypes twice
+ 622196 - Unportable test(1) construct in configure script
+ 620604 - Description of "histogram" procedure is slightly inaccurate
+ 541586 - Tool options not saved/loaded correctly?
+ 614153 - Importing PDF files with long titles
+ 600112 - blur-gauss-selective.exe crashes
+ 599233 - Dialog of "Save as BMP" ignores changes which are not made
+          with a mous
+ 565001 - Text-Tool crashes when edit a 2.4.2 version xcf
+ 610478 - Layer preview suddenly stops getting updated
+ 609026 - leaks shared memory
+ 609056 - Exporting to Alias PIX format fails
+ 608188 - a few strings in Save as... > Raw image data dialog are always
+          in English
+ 604820 - GEGL Operation "path" crashes GIMP
+ 603711 - Crashes when using path tool
+ 607242 - GIMP 2.7.0 fails to build against libpng 1.4.0
+ 606372 - Saving to .ppm fails on indexed colorspace
+ 605237 - the "Antialiasing..." message in the progress bar does not show
+          translated
+ 604508 - gimp-layer-new-from-visible should work from updated projection
+
+* Updated and new translations:
+
+ Asturian (ast)
+ Basque (eu)
+ Burmese (my)
+ Catalan (ca)
+ Chinese (Hong Kong) (zh_HK)
+ Chinese (Taiwan) (zh_HK)
+ German (de)
+ Italian (it)
+ Latvian (lv)
+ Low German (nds)
+ Romanian (ro)
+ Simplified Chinese (zh_CN)
+ Slovenian (sl)
+ Ukrainian (uk)
+ Valencian (ca@valencia)
+
+
+Overview of Changes from GIMP 2.6.7 to GIMP 2.6.8
+=================================================
+
+* Bugs fixed:
+
+ 470698 - MapObject cannot modify highlight
+ 593848 - FG color changed to black when FG-BG Editor tab created
+ 594651 - layer.scale() raises RuntimeError
+ 594998 - Keyboard shortcuts does not work for first image when dock
+          is focused
+ 599765 - F1 key on gimp-tool-align in menu have wrong link and it
+          open gimp-tool-move
+ 600484 - Gimp BMP Integer Overflow Vulnerability
+ 600741 - "read_channel_data()" Integer Overflow Vulnerability
+ 601891 - gimp_image_get_selection returns None
+ 602761 - plug-in-grid: Parameters Horizontal/Vertical Spacing and
+          Horizontal/Vertical Offset are reversed.
+ 603995 - PCX plugin doesn't sanitize input to avoid allocation overflows.
+ 603998 - PCX: Calculating amount of memory to allocate may overflow.
+ 604000 - SGI: sanitize input
+ 604001 - SGI: Calculating amount of memory to allocate may overflow.
+ 604002 - SGI: RLE encoded input data may write beyond allocated buffers
+ 604004 - SGI: allocate memory consistently
+ 604008 - GBR, PAT: sanitize input data
+ 604078 - Crash when pressing Backspace with Free Select Tool
+
+* Updated and new translations:
+
+ Basque (eu)
+ British English (en_GB)
+ Czech (cs)
+ French (fr)
+ Greek (el)
+ Italian (it)
+ Japanese (ja)
+ Norwegian Nynorsk (nn)
+ Polish (pl)
+ Romanian (ro)
+ Russian (ru)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.6 to GIMP 2.6.7
+=================================================
+
+* Bugs fixed:
+
+ 591017 – Tablet pan is not working as fast as it should
+ 577581 – Crashes when using any colors tool/function on Windows
+ 589667 – GIMP crashes when clicking GEGL Operation on Windows
+ 569833 – file-jpeg-save erroneous with small quality values
+ 590638 – Changing palettes from list to grid view loses "locked to dock"
+          status
+ 589674 – "Send by Email" does not update "Filename"
+ 586851 – Transparent BMP files fail to load
+ 589205 – help-browser uses deprecated (and sometimes broken) webkit call
+ 582821 – 'Sphere Designer' does not reset correctly...
+ 570353 – first time open of .svg file ignores the requested units
+ 555777 – Export to MNG animation fails
+ 577301 – Dithering with transparency is broken for "positioned" method
+ 493778 – metadata plug-in crashes on some images
+ 567466 – PNG comment not found if more than 1 tEXt chunks
+ 585665 – Exporting to PSD with a blank text layer creates a corrupt file
+ 586316 – Levels tool does not adjust output levels correctly if input
+          levels are changed
+ 569661 – Import from PDF throws errors when entering resolution in
+          pixels per millimetre
+ 567262 – Black pixels appear in "Spread" filter preview
+ 554658 – Path Dialog: Path preview pics not to see constantly
+ 167604 – gimp_gradient_get_color_at() may return out-of-bounds values
+ 567393 – Rectangle select tool size shrinks to 0 if size is larger than
+          the image and the up or down arrow is pressed
+ 587543 – crash when invoking certain actions by keyboard shortcut
+ 563029 - Closing maximized image doesn't restore document window size
+ 585488 – Perspective transformation on a layer with a mask causes crash
+ 586008 - GIMP crashes when right-click canceling a drawing action initiated
+          outside layer boundaries
+ 584345 – when printing, the number of copies should be reset to 1
+ 557061 – Alpha to Logo
+ 472644 – Rotate with clipping crops the whole layer
+ 577575 – transform tool fills underlying extracted area wrongly
+ 555738 – Image display is wrong after undoing canvas size
+ 577024 – help-browser plugin crashes when used with webkit 1.1.3
+ 555025 – Action GEGL box widgets weirdness
+
+* Updated and new translations:
+
+ Czech (cs)
+ Danish (da)
+ German (de)
+ Spanish (es)
+ Basque (eu)
+ Finnish (fi)
+ Hungarian (hu)
+ Italian (it)
+ Gujarati (gu)
+ Japanese (ja)
+ Kannada (kn)
+ Marathi (mr)
+ Norwegian bokmål (nb)
+ Oriya (or)
+ Portuguese (pt)
+ Romanian (ro)
+ Sinhala (si)
+ Swedish (sv)
+ Simplified Chinese (zh_CN)
+ Traditional Chinese - Hong Kong (zh_HK)
+ Traditional Chinese - Taiwan (zh_TW)
+
+
+Overview of Changes from GIMP 2.6.5 to GIMP 2.6.6
+=================================================
+
+* Bugs fixed:
+
+ 571117 – lcms plug-in crashes on broken profile
+ 575154 – changing the help browser preference may not work
+ 573542 – blur plugin: bug in the first line
+ 572403 – gimp-2.6 crashed with SIGSEGV in IA__g_object_get()
+ 573695 – 1-bit white background saved as PBM becomes all black
+ 573488 – Small bug in Filter>Distorts>Ripple
+ 572156 – top left pixel position/coordinate is not 0,0 but 1,1
+ 472644 – Rotate with clipping crops the whole layer
+
+* Updated translations:
+
+ German (de)
+ Spanish (es)
+ Estonian (et)
+ Basque (eu)
+ French (fr)
+ Italian (it)
+ Portuguese (pt)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.4 to GIMP 2.6.5
+=================================================
+
+* Bugs fixed:
+
+ 571628 – Scaling image to 25% turn background from white to grey
+ 567840 – GIMP's GtkScaleButton conflicts with GTK's
+ 569043 – GEGL tool - missing Operation Settings for all sub-tools
+ 568890 – don't rely on GtkAction implementation details
+ 568909 – wrong RGB values for color names in libgimpcolor/gimprgb-parse.c
+ 568839 – wrong hex RGB value for the color names slategrey and slategray
+ 559408 - Brushes dragged to the image window look strange
+ 563337 – Rectangle Select Tool does not allow 1:1 fixed ratio
+ 568016 – Black pullout parameter of plug-in-newsprint has no effect
+ 562818 – First image opened in GIMP offset
+ 562213 – Align Tool doesn't work properly if it is the active tool
+          at startup
+
+* Updated translations:
+
+ Spanish (es)
+ Estonian (et)
+ Hindi (hi)
+ Italian (it)
+ Brazilian Portuguese (pt_BR)
+ Romanian (ro)
+ Russian (ru)
+ Serbian (sr)
+ Tamil (ta)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.3 to GIMP 2.6.4
+=================================================
+
+* Bugs fixed:
+
+ 565223 – Perspective transformation jagged edges / comb effect
+ 563985 – jpg save dialog: "cancel" is treated like "commit"
+          for settings
+ 564087 – Using clone tool on a layer with a part out of canvas
+          causes crashes
+ 564593 – crash when the drawable is changed while a color tool
+          is active
+ 564869 – GIMP crashes on selecting Tools->GEGL operation
+ 565138 – python-fu-foggify does not check if image is in rgb mode
+ 563130 – Hue selection mode does not cross the 0-360 degrees line
+ 563179 – Scrollbars not resized when we extend the canvas size
+ 562459 – PF_PALETTE: 'TypeError' when used in a plugin that is
+          registered in <Image>
+ 562427 – Compilation with --as-needed
+ 562386 – PF_SLIDER and PF_SPINNER 'Step' values do not change
+          consistently...
+ 562366 – Default image dimensions are not correctly
+          transferred in the file/new dialog box
+ 561899 – GIMP can't save to mounted filesystem if file exists
+
+* Updated translations:
+
+ Greek (el)
+ Hindi (hi)
+ Hungarian (hu)
+ Italian (it)
+ Japanese (ja)
+ Korean (ko)
+ Slovenian (sl)
+ Swedish (sv)
+ Tamil (ta)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.2 to GIMP 2.6.3
+=================================================
+
+* Bugs fixed:
+
+ 558454 – Plugin Map Color Range disappears from GIMP
+ 559239 – Error while loading psd-data
+ 560903 – Explicit zooming with e.g. '1' should handle
+	  zoom-focus better
+ 560245 – Zoom selection always centered in the Navigation tab
+ 559490 – Wrong lang tags for 'no'
+ 559292 – SOTA Chrome cannot accept different textures
+ 560375 – Clearing an already empty document history crashes GIMP
+ 559580 – Image windows need better default locations
+ 560283 – "Scale image..." causes distortion around edges
+ 559716 – Changing crop size in Crop Tool Options can make UI
+          unresponsive
+ 558549 – Stroking a single-point path with a paint tool
+          crashes GIMP
+ 559015 – Move tool gives bad information about px moved
+ 558660 – help behavior for locales without manual translation
+
+* Updated translations:
+
+ Belarusian (be)
+ Dutch (nl)
+ German (de)
+ Japanese (ja)
+ Lithuanian (lt)
+ Norwegian Bokmål (nb)
+ Norwegian Nynorsk (nn)
+ Polish (pl)
+ Romanian (ro)
+
+
+Overview of Changes from GIMP 2.6.1 to GIMP 2.6.2
+=================================================
+
+* Bugs fixed:
+
+ 557950 – Scaling in Gimp 2.6 is much slower than in Gimp 2.4
+ 558215 – unit and zoom entries in Statusbar not visible
+ 558451 – Cannot build GIMP using Sun CC on Solaris 2.8
+ 558420 – projection incorrect with alpha-less layers
+ 556603 – Zoom region always zooms in center of image
+ 557870 – "Qmask" message popping up here and there
+ 557705 – compatibility with GEGL > 0.0.20
+ 556248 – Scaling gives 'jagged' edges
+ 556804 – Zoom drop down doesn't update
+ 524615 – Print not to scale
+ 555246 – gimp crashes when a file is opened while a preview is generating
+ 556741 – Alpha layer automatically added (in psd format)
+ 556182 – Could you please explain a few strings [I18N]
+ 555697 – build fails if configured with --without-libjpeg
+ 134956 – Curves tool doesn't save free curves
+
+* Updated translations:
+
+ Czech (cs)
+ Danish (da)
+ Finnish (fi)
+ French (fr)
+ Japanese (ja)
+ Polish (pl)
+ Brazilian Portuguese (pt_BR)
+ Swedish (sv)
+ Simplified Chinese (zh_CN)
+
+
+Overview of Changes from GIMP 2.6.0 to GIMP 2.6.1
+=================================================
+
+* Bugs fixed:
+
+ 555587 – PSD file crashes PSD plug-in
+ 555222 – PSD Load Plugin: unsupported compression mode
+ 555362 – gimp-remote is not working properly
+ 555280 – some gif files will not be open
+ 554890 – JPEG Save Options Dialog does not remember
+ 554966 – Gimp crashes creating a new image using a template
+ 554785 – Compile failure on uri-backend-libcurl
+ 554646 – Opening Help crashes GIMP with lqr-plugin installed
+ 553534 – centering issues after image scaling and setting zoom
+ 554898 – Compile failure on uri-backend-wget.c
+
+* Updated translations:
+
+ Belarusian (be)
+ Catalan (ca)
+ Finnish (fi)
+ French (fr)
+ Japanese (ja)
+ Macedonian (mk)
+ Punjab (pa)
+ Brazilian Portuguese (pt_BR)
+ Romanian (ro)
+ Slovenian (sl)
+ Swedish (sv)
